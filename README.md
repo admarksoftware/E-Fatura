@@ -2,11 +2,9 @@
 
 $client = new InvoiceManager();
 ```
-Giriş bilgilerinizi chain fonksiyonlarla tanımlayabiliyorsunuz, bu production için geçerlidir.
 ```php
 // Production environment
 $client->setUsername("XXX")->setPassword("YYY");
-// VEYA
 $client->setCredentials("XXX", "YYY");
 ```
 
@@ -14,7 +12,6 @@ $client->setCredentials("XXX", "YYY");
 // Test Environment
 $client->setDebugMode(true)->setTestCredentials();
 ```
-Ayrıca bilgilerinizi görüntülemek isterseniz:
 ```php
 $client->getCredentials();
 ```
@@ -24,7 +21,6 @@ $client->connect();
 ```
 
 ```php
-// Tüm faturaları listele
 $client->getInvoicesFromAPI("01/01/2020", "08/02/2020");
 ```
 ```php
